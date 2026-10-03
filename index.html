@@ -69,14 +69,14 @@ section{padding-block:64px;border-top:1px solid var(--line)}
 
 /* edge */
 .edge{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:28px}
-.edge div{display:grid;gap:8px;min-width:0}
+.edge div{display:grid;gap:8px;align-content:start;min-width:0}
 .edge h3{font-size:20px;font-weight:700}
 .edge p{margin:0;color:var(--muted)}
 .edge .k{font-family:var(--mono);font-size:12px;color:var(--sand);letter-spacing:.08em;text-transform:uppercase}
 
 /* services */
 .svc{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:0;border-top:1px solid var(--line)}
-.svc div{padding:22px 4px;border-bottom:1px solid var(--line);display:grid;gap:6px;min-width:0}
+.svc div{padding:22px 4px;border-bottom:1px solid var(--line);display:grid;gap:6px;align-content:start;min-width:0}
 .svc h3{font-size:18px;font-weight:700}
 .svc p{margin:0;color:var(--muted);font-size:15px}
 
@@ -103,7 +103,7 @@ section{padding-block:64px;border-top:1px solid var(--line)}
 
 /* process */
 .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:24px;counter-reset:s}
-.steps div{display:grid;gap:6px;counter-increment:s;min-width:0}
+.steps div{display:grid;gap:6px;align-content:start;counter-increment:s;min-width:0}
 .steps div::before{content:counter(s,decimal-leading-zero);font-family:var(--mono);font-size:13px;color:var(--accent)}
 .steps h3{font-size:18px;font-weight:700}
 .steps p{margin:0;color:var(--muted);font-size:15px}
@@ -153,7 +153,7 @@ section{padding-block:64px;border-top:1px solid var(--line)}
 @media (max-width:560px){.carousel .nav{display:none}}
 .wa{width:58px;height:58px;padding:0!important;display:grid!important;place-items:center;border-radius:50%!important;background:#25D366!important;color:#fff!important}
 .promise{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:22px;padding:22px;border:1px dashed var(--accent);border-radius:14px}
-.promise div{display:grid;gap:4px;min-width:0}
+.promise div{display:grid;gap:4px;align-content:start;min-width:0}
 .promise b{font-family:var(--display);font-size:17px}
 .promise span{color:var(--muted);font-size:15px}
 /* instagram feed */
