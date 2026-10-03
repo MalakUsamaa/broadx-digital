@@ -139,6 +139,19 @@ section{padding-block:64px;border-top:1px solid var(--line)}
 .contact .btn{border-color:var(--bg);color:var(--bg);justify-self:start}
 .contact .btn.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
 .contact .ctas{display:flex;flex-wrap:wrap;gap:12px}
+.promo{display:block;background:var(--accent);color:var(--accent-ink);text-align:center;font-size:14px;line-height:1.4;padding-block:10px;padding-inline:16px;margin-inline:-20px;text-decoration:none}
+.promo b{font-weight:700}
+.carousel{position:relative}
+.track{display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;padding-bottom:8px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.track::-webkit-scrollbar{display:none}
+.slide{flex:0 0 min(340px,86%);scroll-snap-align:start;min-width:0}
+.slide .instagram-media{margin:0!important;max-width:100%!important;min-width:0!important;width:100%!important;background:var(--surface)!important;border:1px solid var(--line)!important;border-radius:14px!important;box-shadow:none!important}
+.slide .fallback{display:grid;place-items:center;gap:10px;aspect-ratio:9/14;max-width:100%;padding:20px;text-align:center;text-decoration:none;color:var(--muted);font-family:var(--mono);font-size:13px;background:repeating-linear-gradient(135deg,var(--line) 0 1px,transparent 1px 14px),var(--surface);border-radius:14px}
+.slide .fallback b{font-family:var(--body);color:var(--accent);font-weight:600;font-size:15px}
+.carousel .nav{position:absolute;top:42%;z-index:2;width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:var(--surface);color:var(--ink);font-size:26px;line-height:1;cursor:pointer;display:grid;place-items:center;box-shadow:0 4px 16px rgba(0,0,0,.12)}
+.carousel .prev{left:-10px}.carousel .next{right:-10px}
+@media (max-width:560px){.carousel .nav{display:none}}
+.wa{width:58px;height:58px;padding:0!important;display:grid!important;place-items:center;border-radius:50%!important;background:#25D366!important;color:#fff!important}
 /* instagram feed */
 .feed{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:22px;align-items:start}
 .feed .instagram-media{margin:0!important;max-width:100%!important;min-width:0!important;width:100%!important;background:var(--surface)!important;border:1px solid var(--line)!important;border-radius:14px!important;box-shadow:none!important}
@@ -150,6 +163,7 @@ footer{padding-block:28px 40px;font-size:13px;color:var(--muted);display:flex;fl
 </style>
 </head>
 <body>
+<a class="promo" href="#packages"><b>Founding client offer</b> · 20% off your first month, for the first 3 clients only <span aria-hidden="true">→</span></a>
 <div class="wrap">
 <nav>
   <div class="logo">BroadX<span>.</span></div>
@@ -177,21 +191,6 @@ footer{padding-block:28px 40px;font-size:13px;color:var(--muted);display:flex;fl
   <span class="c">DAMAC</span><span class="c">Mira Developments</span><span class="c">Bounce</span><span class="c">Solo Gate Real Estate</span>
 </div>
 
-<section id="work">
-  <div class="sec-head">
-    <div class="eyebrow">Selected work</div>
-    <h2>Recent reels</h2>
-    <p>A few pieces from the feed. Tap any reel to watch it on Instagram.</p>
-  </div>
-  <div class="feed">
-    <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DEVtsmTTFSC/" data-instgrm-version="14"><a class="fallback" href="https://www.instagram.com/reel/DEVtsmTTFSC/" target="_blank" rel="noopener">Reel loading…<b>Watch on Instagram</b></a></blockquote>
-    <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DZfn7XWoyMs/" data-instgrm-version="14"><a class="fallback" href="https://www.instagram.com/reel/DZfn7XWoyMs/" target="_blank" rel="noopener">Reel loading…<b>Watch on Instagram</b></a></blockquote>
-    <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DY9YrwcoIpA/" data-instgrm-version="14"><a class="fallback" href="https://www.instagram.com/reel/DY9YrwcoIpA/" target="_blank" rel="noopener">Reel loading…<b>Watch on Instagram</b></a></blockquote>
-    <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DbnRr9UK9Nr/" data-instgrm-version="14"><a class="fallback" href="https://www.instagram.com/reel/DbnRr9UK9Nr/" target="_blank" rel="noopener">Reel loading…<b>Watch on Instagram</b></a></blockquote>
-  </div>
-  <div class="feed-foot"><a class="btn" href="https://www.instagram.com/broadx.ai/" target="_blank" rel="noopener">See more on @broadx.ai</a></div>
-  <script async src="https://www.instagram.com/embed.js"></script>
-</section>
 
 <section>
   <div class="sec-head">
@@ -209,7 +208,6 @@ footer{padding-block:28px 40px;font-size:13px;color:var(--muted);display:flex;fl
   <div class="sec-head">
     <div class="eyebrow">Packages &amp; prices</div>
     <h2>Clear prices. No long contracts.</h2>
-    <p class="offer"><b>Founding client offer:</b> 20% off your first month. Open to the first 3 clients only.</p>
     <p>Every package includes filming, editing, captions and scheduling. Month to month, cancel with 30 days' notice. Prices exclude ad spend and VAT.</p>
   </div>
   <div class="pkgs">
@@ -257,6 +255,26 @@ footer{padding-block:28px 40px;font-size:13px;color:var(--muted);display:flex;fl
     <div><h3>Ad creative</h3><p>Reels and copy for Meta and TikTok ads, built to generate leads.</p></div>
     <div><h3>Audits &amp; strategy</h3><p>A clear review of your accounts and a 90-day plan you can run yourself.</p></div>
   </div>
+</section>
+
+<section id="work">
+  <div class="sec-head">
+    <div class="eyebrow">Selected work</div>
+    <h2>Recent reels</h2>
+    <p>A few pieces from the feed. Tap any reel to watch it on Instagram.</p>
+  </div>
+  <div class="carousel" id="reel-carousel">
+  <button class="nav prev" type="button" aria-label="Previous reel">‹</button>
+  <div class="track" tabindex="0">
+    <div class="slide"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DEVtsmTTFSC/" data-instgrm-version="14"><a class="fallback" href="https://www.instagram.com/reel/DEVtsmTTFSC/" target="_blank" rel="noopener">Reel loading…<b>Watch on Instagram</b></a></blockquote></div>
+    <div class="slide"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DZfn7XWoyMs/" data-instgrm-version="14"><a class="fallback" href="https://www.instagram.com/reel/DZfn7XWoyMs/" target="_blank" rel="noopener">Reel loading…<b>Watch on Instagram</b></a></blockquote></div>
+    <div class="slide"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DY9YrwcoIpA/" data-instgrm-version="14"><a class="fallback" href="https://www.instagram.com/reel/DY9YrwcoIpA/" target="_blank" rel="noopener">Reel loading…<b>Watch on Instagram</b></a></blockquote></div>
+    <div class="slide"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DbnRr9UK9Nr/" data-instgrm-version="14"><a class="fallback" href="https://www.instagram.com/reel/DbnRr9UK9Nr/" target="_blank" rel="noopener">Reel loading…<b>Watch on Instagram</b></a></blockquote></div>
+  </div>
+  <button class="nav next" type="button" aria-label="Next reel">›</button>
+  </div>
+  <div class="feed-foot"><a class="btn" href="https://www.instagram.com/broadx.ai/" target="_blank" rel="noopener">See more on @broadx.ai</a></div>
+  <script async src="https://www.instagram.com/embed.js"></script>
 </section>
 
 <section id="about">
@@ -320,6 +338,24 @@ footer{padding-block:28px 40px;font-size:13px;color:var(--muted);display:flex;fl
 <footer><span>© 2026 BroadX Digital · Yousef Bakier</span><span>Dubai, UAE</span></footer>
 </div>
 
-<a class="wa" href="https://wa.me/971563434023?text=Hi%20Yousef%2C%20I%27d%20like%20to%20book%20a%20free%20call%20about%20social%20media%20for%20my%20business." target="_blank" rel="noopener">WhatsApp</a>
+<a class="wa" aria-label="Message on WhatsApp" href="https://wa.me/971563434023?text=Hi%20Yousef%2C%20I%27d%20like%20to%20book%20a%20free%20call%20about%20social%20media%20for%20my%20business." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true" fill="currentColor"><path d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2C6.6 2 2.17 6.43 2.17 11.87c0 1.74.46 3.44 1.32 4.94L2.08 22l5.33-1.4a9.86 9.86 0 0 0 4.63 1.18h.01c5.44 0 9.87-4.43 9.87-9.87 0-2.64-1.03-5.12-2.87-7Zm-7.01 15.2h-.01a8.2 8.2 0 0 1-4.18-1.15l-.3-.18-3.16.83.84-3.08-.2-.32a8.17 8.17 0 0 1-1.25-4.36c0-4.52 3.68-8.2 8.21-8.2 2.19 0 4.25.86 5.8 2.41a8.15 8.15 0 0 1 2.4 5.8c0 4.52-3.68 8.2-8.15 8.2Zm4.5-6.14c-.25-.12-1.46-.72-1.69-.8-.23-.08-.39-.12-.55.12-.16.25-.63.8-.78.97-.14.16-.29.18-.53.06-.25-.12-1.04-.38-1.98-1.22-.73-.65-1.23-1.46-1.37-1.7-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.14.16-.25.25-.41.08-.16.04-.31-.02-.43-.06-.12-.55-1.33-.76-1.82-.2-.48-.4-.41-.55-.42h-.47c-.16 0-.43.06-.65.31-.23.25-.86.84-.86 2.05s.88 2.38 1 2.54c.12.16 1.73 2.64 4.2 3.7.59.25 1.05.4 1.4.52.59.19 1.13.16 1.55.1.47-.07 1.46-.6 1.67-1.18.2-.58.2-1.07.14-1.18-.06-.1-.22-.16-.47-.28Z"/></svg></a>
+<script>
+(function(){
+  var c=document.getElementById('reel-carousel'); if(!c) return;
+  var t=c.querySelector('.track'), paused=false;
+  function step(dir){var sl=t.querySelector('.slide'); if(!sl) return;
+    var w=sl.getBoundingClientRect().width+20;
+    if(dir>0 && t.scrollLeft+t.clientWidth>=t.scrollWidth-5){t.scrollTo({left:0});}
+    else if(dir<0 && t.scrollLeft<=5){t.scrollTo({left:t.scrollWidth});}
+    else t.scrollBy({left:dir*w});}
+  c.querySelector('.next').addEventListener('click',function(){step(1)});
+  c.querySelector('.prev').addEventListener('click',function(){step(-1)});
+  ['mouseenter','touchstart','focusin'].forEach(function(e){c.addEventListener(e,function(){paused=true},{passive:true})});
+  ['mouseleave','focusout'].forEach(function(e){c.addEventListener(e,function(){paused=false})});
+  c.addEventListener('touchend',function(){setTimeout(function(){paused=false},6000)},{passive:true});
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  setInterval(function(){ if(!paused && !document.hidden) step(1); },4000);
+})();
+</script>
 </body>
 </html>
